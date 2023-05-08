@@ -20,9 +20,11 @@ def main():
     ]
 
     output_text = [
-        gr.outputs.Textbox(label="Transcript", info="Audio transcript will be here."),
         gr.outputs.Textbox(
-            label="Translation", info="Audio translation in english will be here"
+            label="Transcript"
+        ),
+        gr.outputs.Textbox(
+            label="Translation"
         ),
     ]
 
