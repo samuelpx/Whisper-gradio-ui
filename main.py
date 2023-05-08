@@ -2,7 +2,7 @@ import gradio as gr
 import whisper
 
 
-def greet(audio_file, model_type):
+def trans_2x(audio_file, model_type):
     model = whisper.load_model(model_type[0])
     result = model.transcribe(audio_file)
     translation = model.transcribe(audio_file, task="translate")
@@ -27,7 +27,7 @@ def main():
     ]
 
     iface = gr.Interface(
-        fn=greet, inputs=audio_input, outputs=output_text, title="Whisper UI"
+        fn=trans_2x, inputs=audio_input, outputs=output_text, title="Whisper UI"
     )
 
     iface.launch()
